@@ -1,0 +1,94 @@
+jQuery(document).ready(function($) {
+  "use strict";
+
+  //Contact
+  $('form.php-email-form').submit(function() {
+
+    document.getElementById("message").value = "\n  " + 
+    "name = " + document.getElementById("name").value + "\n  " + 
+    "service = " + document.getElementById("service").value + "\n  " + 
+    "number = " + document.getElementById("number").value + "\n  " + 
+    "message = " + document.getElementById("message").value + "\n  " ;
+    
+    var contactform =  document.getElementById('myform');
+    contactform.action ="https://formspree.io/f/xnqoovdd";
+  });
+  //Subscribe
+  $('form.php-subscribe-form').submit(function() {    
+    var contactform =  document.getElementById('subscribe');
+    contactform.action ="https://formspree.io/f/xnqoovdd";
+  });
+});
+
+
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    document.getElementById("vat").href = "#vat2";   //change url
+    document.getElementById("vat").target = "#vat2";     //change target
+
+    document.getElementById("book").href = "#vat2";   //change url
+    document.getElementById("book").target = "#vat2";     //change target
+
+    document.getElementById("return").href = "#return2";   //change url
+    document.getElementById("return").target = "#return2";     //change target
+    
+    document.getElementById("audit").href = "#audit2";   //change url
+    document.getElementById("audit").target = "#audit2";     //change target
+   
+    document.getElementById("financials").href = "#financial2";   //change url
+    document.getElementById("financials").target = "#financial2";     //change target
+   
+    document.getElementById("control").href = "#control2";   //change url
+    document.getElementById("control").target = "#control2";     //change target
+    
+    document.getElementById("payroll").href = "#payroll2";   //change url
+    document.getElementById("payroll").target = "#payroll2";     //change target
+   
+    document.getElementById("internal").href = "#internal2";   //change url
+    document.getElementById("internal").target = "#internal2";     //change target
+    
+    document.getElementById("pro").href = "#pro2";   //change url
+    document.getElementById("pro").target = "#pro2";     //change target
+   
+    document.getElementById("business").href = "#business2";   //change url
+    document.getElementById("business").target = "#business2";     //change target
+        
+    document.getElementById("software").href = "#software2";   //change url
+    document.getElementById("software").target = "#software2";     //change target
+   
+    document.getElementById("others").href = "#other2";   //change url
+    document.getElementById("others").target = "#other2";     //change target    
+
+    
+    document.getElementById("vat2").href = "#vat2";   //change url
+    document.getElementById("vat2").target = "#vat2";     //change target
+    
+    document.getElementById("accounting2").href = "#audit2";   //change url
+    document.getElementById("accounting2").target = "#audit2";     //change target
+    
+    document.getElementById("payroll2").href = "#payroll2";   //change url
+    document.getElementById("payroll2").target = "#payroll2";     //change target
+    
+    document.getElementById("pro2").href = "#pro2";   //change url
+    document.getElementById("pro2").target = "#pro2";     //change target
+
+    document.getElementById("others2").href = "#other2";   //change url
+    document.getElementById("others2").target = "#other2";     //change target    
+}
+function check()
+{
+
+    var mobile = document.getElementById('mobile');
+   
+    
+    var message = document.getElementById('message');
+
+   var goodColor = "#0C6";
+    var badColor = "#FF9B37";
+  
+    if(mobile.value.length!=10){
+       
+        mobile.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "required 10 digits, match requested format!"
+    }}
